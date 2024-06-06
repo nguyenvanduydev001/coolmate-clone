@@ -1,0 +1,42 @@
+:root {
+  --header-height: 70px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+.container {
+  max-width: 1240px;
+  margin: auto;
+}
+.row-flex {
+  display: flex;
+  justify-content: space-between;
+}
+/* header */
+header {
+  height: var(--header-height);
+  border-bottom: 1px solid #ddd;
+}
+header .row-flex {
+  align-items: center;
+}
+.header-logo img {
+  width: 100px;
+}
+.header-nav nav ul {
+  display: flex;
+  column-gap: 12px;
+}
+.header-nav nav ul li a {
+  line-height: var(--header-height);
+  font-size: smaller;
+}
