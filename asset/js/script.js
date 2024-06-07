@@ -29,14 +29,20 @@ arrowLeft.addEventListener('click',()=>{
 })
 
 // Di chuyển ảnh tự động
-// function autoSlider(){
-//     if(i<sliderItem.length-1)
-//     {
-//         i++
-//         silderMove(i)
-//     }else{
-//         i = 0
-//         silderMove(i)
-//     }
-// }
-// setInterval(autoSlider,5000)
+function autoSlider(){
+    if(i<sliderItem.length-1)
+    {
+        i++
+        silderMove(i)
+    }else{
+        i = 0
+        silderMove(i)
+    }
+}
+setInterval(autoSlider,5000)
+// Menubar responsive
+const Menubar = document.querySelector('.header-bar-icon')
+const headerNav = document.querySelector('.header-nav')
+Menubar.addEventListener('click',()=>{
+    headerNav.classList.toggle('active')
+})
