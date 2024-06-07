@@ -17,7 +17,7 @@ a {
   text-decoration: none;
   color: unset;
 }
-input{
+input {
   outline: none;
 }
 .container {
@@ -32,6 +32,10 @@ input{
 header {
   height: var(--header-height);
   border-bottom: 1px solid #ddd;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: #e8e8e8;
 }
 header .row-flex {
   align-items: center;
@@ -65,18 +69,18 @@ header .row-flex {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.header-search input{
+.header-search input {
   height: 30px;
   border: 1px solid var(--border-black);
-  padding-left: 20px;
+  padding-left: 24px;
   border-radius: 15px;
 }
-.header-cart i{
+.header-cart i {
   font-size: larger;
   cursor: pointer;
   position: relative;
 }
-.header-cart i::after{
+.header-cart i::after {
   content: attr(number);
   position: absolute;
   display: flex;
@@ -93,22 +97,41 @@ header .row-flex {
   font-size: small;
 }
 /* slider */
-.slider{
+.slider {
   width: 100%;
   overflow: hidden;
   aspect-ratio: 2.45/1;
-}
-.slider-items{
   position: relative;
+  padding-top: var(--header-height);
+}
+.slider-items {
+  display: flex;
   transition: var(--main-transition);
+  width: 100%;
 }
-.slider-item{
+.slider-item {
+  min-width: 100%;
+}
+.slider-item img {
+  width: 100%;
+}
+.slider-arrow {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
 }
-.slider-item img{
-  width: 100vw;
+.slider-arrow.left {
+  left: 80px;
 }
-.slider-arrow{
-  position: absolute;
-  z-index: 1;
+.slider-arrow.right {
+  right: 80px;
+}
+.slider-arrow i {
+  font-size: 30px;
+  color: white;
+}
+.slider-arrow i:hover {
+  color: black;
 }
