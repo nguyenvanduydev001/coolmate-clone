@@ -229,6 +229,24 @@ footer .row-grid {
   margin-bottom: 12px;
   cursor: pointer;
 }
+/* product detail */
+.p-to-top {
+  padding-top: calc(var(--header-height) + 20px);
+}
+.row-flex-product-detail {
+  justify-content: flex-start;
+  align-items: center;
+}
+.product-product {
+  font-size: 13px;
+  font-weight: 500;
+  color: grey;
+}
+.product-heading {
+  font-size: 14px;
+  font-weight: 500;
+}
+
 /* --------------------------------- */
 /* reponsive */
 .header-bar-icon i {
