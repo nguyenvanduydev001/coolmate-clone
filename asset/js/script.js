@@ -65,9 +65,26 @@ const imageMain = document.querySelector(".main-image");
 for (let index = 0; index < imageSmall.length; index++) {
   imageSmall[index].addEventListener("click", () => {
     for (let a = 0; a < imageSmall.length; a++) {
-      imageSmall[a].classList.remove('active')
+      imageSmall[a].classList.remove("active");
     }
     imageMain.src = imageSmall[index].src;
     imageSmall[index].classList.add("active");
   });
 }
+// * quantity-product
+const quadPlus = document.querySelector(".ri-add-line");
+const quadMinus = document.querySelector(".ri-subtract-line");
+const quadInput = document.querySelector(".quantity-input");
+let qty = 1;
+quadPlus.addEventListener("click", () => {
+  qty++;
+  quadInput.value = qty
+});
+quadMinus.addEventListener('click',()=>{
+  if(qty <= 1){
+    return false
+  }else{
+    qty--
+    quadInput.value = qty
+  }
+})
