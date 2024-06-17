@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
-  --header-height: 70px;
   --main-bg: #d5d5d5;
   --main-transition: all 0.3s ease;
-  --border-black: black;
   --main-color: whitesmoke;
   --main-font: "Roboto", sans-serif;
-  --color-black: black;
   --main-border-radius: 5px;
+  --main-border-radius-15: 15px;
   --main-font-weight: 500;
+  --main-border: 1px solid #d5d5d5;
+  --header-height: 70px;
+  --border-black: black;
+  --color-black: black;
+  --color-blue: #2f5acf;
 }
 * {
   padding: 0;
@@ -369,13 +372,29 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   transition: var(--main-transition);
 }
+.main-cart {
+  width: 100%;
+  padding: 16px 12px;
+  border: none;
+  color: var(--main-color);
+  background-color: var(--color-black);
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
 .main-btn:hover {
-  background-color: var(--main-bg);
-  color: var(--color-black);
+  background-color: var(--color-blue);
+  color: var(--main-color);
 }
 .button-cart:hover {
   background-color: var(--main-bg);
   color: var(--color-black);
+}
+.main-cart:hover {
+  background-color: var(--color-blue);
+  color: var(--main-color);
 }
 .product-detail-right-quantity {
   display: flex;
@@ -407,8 +426,7 @@ input::-webkit-inner-spin-button {
   font-size: 20px;
 }
 .cart-section .row-grid {
-  grid-template-columns: 60% 40%;
-  column-gap: 30px;
+  grid-template-columns: 58% 40%;
 }
 .cart-section table {
   width: 100%;
@@ -445,6 +463,31 @@ td {
 }
 .cart-section table tbody tr td:last-child:hover {
   color: red;
+}
+.cart-section-right input {
+  height: 35px;
+  border: var(--main-border);
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-radius: var(--main-border-radius-15);
+}
+.cart-section-right select {
+  height: 35px;
+  border: var(--main-border);
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-radius: var(--main-border-radius-15);
+}
+.cart-section-right-select {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-section-right-input-name-phone {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-section-right-input-name-phone input {
+  width: 49%;
 }
 /* --------------------------------- */
 /* responsive */
@@ -532,5 +575,14 @@ td {
   }
   .product-detail-right-info h1 {
     font-size: 26px;
+  }
+  /* cart-detail */
+  .cart-section .row-grid{
+    grid-template-columns: 100%;
+    row-gap: 20px;
+  }
+  .cart-section-right-select{
+    display: grid;
+    grid-template-columns: 100%;
   }
 }
