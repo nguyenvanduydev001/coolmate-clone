@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
-  --main-bg: #d5d5d5;
+  --main-bg: #e8e8e8;
   --main-transition: all 0.3s ease;
   --main-color: whitesmoke;
   --main-font: "Roboto", sans-serif;
@@ -193,6 +193,7 @@ header .row-flex {
 .hot-product-item img {
   width: 100%;
   cursor: pointer;
+  border-radius: var(--main-border-radius);
 }
 .hot-product-item > p {
   font-weight: 400;
@@ -384,6 +385,19 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   transition: var(--main-transition);
 }
+.button-order {
+  margin-top: 12px;
+  width: 200px;
+  padding: 5px 12px;
+  border: none;
+  color: var(--main-color);
+  background-color: var(--color-black);
+  border-radius: var(--main-border-radius);
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
 .main-btn:hover {
   background-color: var(--color-blue);
   color: var(--main-color);
@@ -393,6 +407,10 @@ input::-webkit-inner-spin-button {
   color: var(--color-black);
 }
 .main-cart:hover {
+  background-color: var(--color-blue);
+  color: var(--main-color);
+}
+.button-order:hover {
   background-color: var(--color-blue);
   color: var(--main-color);
 }
@@ -476,7 +494,7 @@ td {
   height: 35px;
   border: var(--main-border);
   margin-bottom: 12px;
-  padding-left: 12px;
+  padding-left: 3px;
   border-radius: var(--main-border-radius-15);
 }
 .cart-section-right-select {
@@ -489,6 +507,14 @@ td {
 }
 .cart-section-right-input-name-phone input {
   width: 49%;
+}
+/* order-confirm */
+.order-confirm-content {
+  width: 100%;
+  padding: 20px 12px;
+  border-radius: var(--main-border-radius);
+  border: var(--main-border);
+  margin-top: 20px;
 }
 /* --------------------------------- */
 /* responsive */
@@ -586,7 +612,7 @@ td {
     display: grid;
     grid-template-columns: 100%;
   }
-  .button-cart{
+  .button-cart {
     width: 137px;
     padding: 9px 3px;
     font-size: 14px;

@@ -76,18 +76,21 @@ const quadPlus = document.querySelector(".ri-add-line");
 const quadMinus = document.querySelector(".ri-subtract-line");
 const quadInput = document.querySelector(".quantity-input");
 let qty = 1;
-quadPlus.addEventListener("click", () => {
-  qty++;
-  quadInput.value = qty;
-});
-quadMinus.addEventListener("click", () => {
-  if (qty <= 1) {
-    return false;
-  } else {
-    qty--;
+if (quadMinus != null && quadPlus != null) {
+  quadPlus.addEventListener("click", () => {
+    qty++;
     quadInput.value = qty;
-  }
-});
+  });
+  quadMinus.addEventListener("click", () => {
+    if (qty <= 1) {
+      return false;
+    } else {
+      qty--;
+      quadInput.value = qty;
+    }
+  });
+}
+
 // xử lý quận huyện
 document.addEventListener("DOMContentLoaded", function () {
   const citySelect = document.getElementById("city");
