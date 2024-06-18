@@ -466,6 +466,7 @@ td {
 }
 .cart-section-right input {
   height: 35px;
+  width: 100%;
   border: var(--main-border);
   margin-bottom: 12px;
   padding-left: 12px;
@@ -574,15 +575,20 @@ td {
     margin: 12px 0 12px 32%;
   }
   .product-detail-right-info h1 {
-    font-size: 26px;
+    font-size: 15px;
   }
   /* cart-detail */
-  .cart-section .row-grid{
+  .cart-section .row-grid {
     grid-template-columns: 100%;
     row-gap: 20px;
   }
-  .cart-section-right-select{
+  .cart-section-right-select {
     display: grid;
     grid-template-columns: 100%;
+  }
+  .button-cart{
+    width: 137px;
+    padding: 9px 3px;
+    font-size: 14px;
   }
 }

@@ -78,13 +78,70 @@ const quadInput = document.querySelector(".quantity-input");
 let qty = 1;
 quadPlus.addEventListener("click", () => {
   qty++;
-  quadInput.value = qty
+  quadInput.value = qty;
 });
-quadMinus.addEventListener('click',()=>{
-  if(qty <= 1){
-    return false
-  }else{
-    qty--
-    quadInput.value = qty
+quadMinus.addEventListener("click", () => {
+  if (qty <= 1) {
+    return false;
+  } else {
+    qty--;
+    quadInput.value = qty;
   }
-})
+});
+// xử lý quận huyện
+document.addEventListener("DOMContentLoaded", function () {
+  const citySelect = document.getElementById("city");
+  const districtSelect = document.getElementById("district");
+  const wardSelect = document.getElementById("ward");
+
+  // Mock data for districts and wards
+  const mockDistricts = [
+    { id: "1", name: "Quận 1" },
+    { id: "2", name: "Quận 2" },
+    { id: "3", name: "Quận 3" },
+    // Add more districts as needed
+  ];
+
+  const mockWards = [
+    { id: "101", name: "Phường Bến Nghé" },
+    { id: "102", name: "Phường Cầu Kho" },
+    { id: "103", name: "Phường Nguyễn Cư Trinh" },
+    // Add more wards as needed
+  ];
+
+  // Function to populate districts dropdown
+  function populateDistricts(provinceId) {
+    districtSelect.innerHTML = '<option value="">Chọn Quận/Huyện</option>';
+    mockDistricts.forEach((district) => {
+      let option = document.createElement("option");
+      option.value = district.id;
+      option.textContent = district.name;
+      districtSelect.appendChild(option);
+    });
+  }
+
+  // Function to populate wards dropdown
+  function populateWards(districtId) {
+    wardSelect.innerHTML = '<option value="">Chọn Phường/Xã</option>';
+    mockWards.forEach((ward) => {
+      let option = document.createElement("option");
+      option.value = ward.id;
+      option.textContent = ward.name;
+      wardSelect.appendChild(option);
+    });
+  }
+
+  // Event listener for city select change
+  citySelect.addEventListener("change", function () {
+    const selectedCityId = this.value;
+    // Call function to populate districts dropdown
+    populateDistricts(selectedCityId);
+  });
+
+  // Event listener for district select change
+  districtSelect.addEventListener("change", function () {
+    const selectedDistrictId = this.value;
+    // Call function to populate wards dropdown
+    populateWards(selectedDistrictId);
+  });
+});

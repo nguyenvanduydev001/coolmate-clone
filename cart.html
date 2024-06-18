@@ -53,7 +53,7 @@
       <div class="container">
         <div class="row-grid">
           <div class="cart-section-left">
-            <h2 style="font-size: 25px; margin-bottom: 5px;">Giỏ hàng</h2>
+            <h2 style="font-size: 25px; margin-bottom: 5px">Giỏ hàng</h2>
             <div class="cart-section-left-detail">
               <table>
                 <thead>
@@ -183,36 +183,49 @@
               </table>
               <br />
               <button class="button-cart">Cập nhật giỏ hàng</button>
-              <a style="color: red; margin-left: 8px" href="">
+              <a style="color: red; margin-left: 8px" href="/">
                 >>Tiếp tục mua hàng</a
               >
             </div>
           </div>
           <div class="cart-section-right">
-            <h2 style="font-size: 25px; margin-bottom: 5px;">Thông tin vận chuyển</h2>
+            <h2 style="font-size: 25px; margin-bottom: 5px">
+              Thông tin vận chuyển
+            </h2>
             <div class="cart-section-right-input-name-phone">
-              <input type="text" placeholder="Nhập tên của bạn">
-              <input type="text" placeholder="Nhập số điện thoại của bạn">
+              <input type="text" placeholder="Nhập tên của bạn" />
+              <input type="text" placeholder="Nhập số điện thoại của bạn" />
             </div>
             <div class="cart-section-right-input-email">
-              <input type="text" placeholder="Nhập Email của bạn">
+              <input type="text" placeholder="Nhập Email của bạn" />
             </div>
             <div class="cart-section-right-select">
-              <select name="" id="">
+              <select id="city">
                 <option value="">Chọn Tỉnh/Thành Phố</option>
-              </select>
-              <select name="" id="">
+                <option value="92">Thành phố Cần Thơ</option>
+                <option value="48">Thành phố Đà Nẵng</option>
+                <option value="01">Thành phố Hà Nội</option>
+                <option value="31">Thành phố Hải Phòng</option>
+                <option value="79">Thành phố Hồ Chí Minh</option>
+            </select>
+              <select name="" id="district">
                 <option value="">Chọn Quận/Huyện</option>
               </select>
-              <select name="" id="">
+              <select name="" id="ward">
                 <option value="">Chọn Phường/Xã</option>
               </select>
             </div>
             <div class="cart-section-right-input-adress">
-              <input type="text" placeholder="Địa chỉ(ví dụ: 103 Vạn Phúc,phường Vạn Phúc)">
+              <input
+                type="text"
+                placeholder="Địa chỉ(ví dụ: 103 Vạn Phúc,phường Vạn Phúc)"
+              />
             </div>
             <div class="cart-section-right-input-note">
-              <input type="text" placeholder="Ghi chú thêm(Ví dụ: Giao hàng giờ hành chính)">
+              <input
+                type="text"
+                placeholder="Ghi chú thêm(Ví dụ: Giao hàng giờ hành chính)"
+              />
             </div>
             <button class="main-cart">Đặt hàng</button>
           </div>
@@ -309,6 +322,6 @@
         </div>
       </div>
     </footer>
-    <script src="../asset/js/script.js"></script>
+    <script src="./asset/js/script.js"></script>
   </body>
 </html>
