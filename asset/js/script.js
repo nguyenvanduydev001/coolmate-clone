@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  //* Click chuyển ảnh
+  // //* Click chuyển ảnh
   function sidlerMove(i) {
     if (sliderItems) {
       sliderItems.style.transform = `translateX(-${i * 100}%)`;
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //* Di chuyển ảnh tự động
+  // //* Di chuyển ảnh tự động
   function autoSlider() {
     if (i < sliderItem.length - 1) {
       i++;
